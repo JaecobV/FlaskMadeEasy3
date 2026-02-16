@@ -1,0 +1,29 @@
+-- database: ./database1.db
+
+-- Use the ▷ button in the top right corner to run the entire file.
+
+SELECT * FROM Cars;
+
+INSERT INTO Cars (Model, TopSpeed, Cost, Description) VALUES ("12Cilindri", 211, 423000, "The 12Cilindri is a tribute to Ferrari's legendary naturally aspirated V12. It produces 819 hp, revs to 9,500 rpm, and features a stunning design inspired by the 1970s 365 GTB/4 Daytona.");
+
+INSERT INTO Cars (Model, TopSpeed, Cost, Description) VALUES ("Temerario", 213, 390000, "The Temerario replaces the Huracán, debuting a twin-turbo V8 hybrid that revs to 10,000 rpm. With 907 hp and three electric motors, it represents the high-tech future of the 'Baby Lambo'.");
+
+INSERT INTO Cars (Model, TopSpeed, Cost, Description) VALUES ("911 Turbo S", 205, 230400, "The 911 Turbo S is the ultimate daily-driver supercar. Its 640 hp twin-turbo flat-six and AWD system provide a 0-60 time of just 2.6 seconds, setting the benchmark for usable performance.");
+
+INSERT INTO Cars (Model, TopSpeed, Cost, Description) VALUES ("296 GTB", 205, 338255, "The 296 GTB is Ferrari's first V6-powered road car since the Dino era. Its hybrid system produces 818 hp, offering a 'fun to drive' character with incredible agility and a compact wheelbase.");
+
+INSERT INTO Cars (Model, TopSpeed, Cost, Description) VALUES ("Urus SE", 194, 258000, "The Urus SE is the first hybrid version of the Super SUV. It pairs a twin-turbo V8 with a powerful electric motor to produce 789 hp, making it the most powerful Urus in the lineup.");
+
+INSERT INTO Cars (Model, TopSpeed, Cost, Description) VALUES ("918 Spyder", 214, 845000, "The 918 Spyder is a legendary hybrid hypercar. Combining a race-derived V8 with two electric motors, it produces 887 hp and was the first production car to break the 7-minute Nurburgring barrier.");
+
+INSERT INTO Cars (Model, TopSpeed, Cost, Description) VALUES ("Purosangue", 193, 400000, "The Purosangue is Ferrari’s first four-door, four-seater production car. Despite its SUV-like stance, it remains a true supercar with a 715 hp mid-front-mounted V12 and active suspension.");
+
+INSERT INTO Cars (Model, TopSpeed, Cost, Description) VALUES ("Huracan STO", 193, 334000, "The STO (Super Trofeo Omologata) is a road-legal version of Lamborghini’s race cars. It focuses on extreme aerodynamics and lightweight carbon fiber for track-focused performance.");
+
+INSERT INTO Cars (Model, TopSpeed, Cost, Description) VALUES ("Taycan Turbo GT", 180, 230000, "The Turbo GT is Porsche’s most powerful production car ever. This all-electric beast produces up to 1,019 hp with Launch Control, proving that EVs can dominate on the track.");
+
+INSERT INTO Cars (Model, TopSpeed, Cost, Description) VALUES ("Daytona SP3", 211, 2250000, "Part of the Icona series, the Daytona SP3 celebrates the 1967 24 Hours of Daytona. It is a mid-engine masterpiece with a 829 hp V12 and a design that is purely aerodynamic and sculptural.");
+
+INSERT INTO Cars (Model, TopSpeed, Cost, Description) VALUES ("Sian FKP 37", 217, 3000000, "The Sian is Lamborghini’s first hybrid hypercar, utilizing supercapacitors instead of traditional batteries. It produces 819 hp and features futuristic styling inspired by the Countach.");
+
+INSERT INTO Cars (Model, TopSpeed, Cost, Description) VALUES ("Cayenne Turbo GT", 186, 196300, "The Cayenne Turbo GT is an SUV that defies physics. With a 650 hp V8 and specialized track tires, it currently holds SUV lap records, offering supercar performance in a family-sized package.");

@@ -1,3 +1,0 @@
--- database: ./database1.db
-
-SELECT * FROM Cars;
