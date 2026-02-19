@@ -3,6 +3,11 @@
 -- Use the ▷ button in the top right corner to run the entire file.
 
 SELECT * FROM Cars;
+INSERT INTO Cars (Model, TopSpeed, Cost, Description) VALUES ("SF90", 211, 530000, "The SF90 is Ferrari’s first plug-in hybrid supercar. It pairs a twin-turbo V8 with three electric motors to produce a staggering 986 hp, delivering lightning-fast AWD acceleration and a sleek, cab-forward design.");
+
+INSERT INTO Cars (Model, TopSpeed, Cost, Description) VALUES ("Revuelto", 217, 610000, "The Revuelto is Lamborghini’s first V12 hybrid. It pairs a massive 6.5L engine with three electric motors to hit 1,001 hp, featuring sharp Y-shaped lights and a carbon-fiber chassis.");
+
+INSERT INTO Cars (Model, TopSpeed, Cost, Description) VALUES ("911 GT3 RS", 184, 240000, "The 911 GT3 RS is Porsche’s track-focused masterpiece. Its 4.0L flat-six engine produces 518 hp, featuring a massive swan-neck wing and active aero that creates incredible high-speed downforce.");
 
 INSERT INTO Cars (Model, TopSpeed, Cost, Description) VALUES ("12Cilindri", 211, 423000, "The 12Cilindri is a tribute to Ferrari's legendary naturally aspirated V12. It produces 819 hp, revs to 9,500 rpm, and features a stunning design inspired by the 1970s 365 GTB/4 Daytona.");
 
@@ -27,3 +32,23 @@ INSERT INTO Cars (Model, TopSpeed, Cost, Description) VALUES ("Daytona SP3", 211
 INSERT INTO Cars (Model, TopSpeed, Cost, Description) VALUES ("Sian FKP 37", 217, 3000000, "The Sian is Lamborghini’s first hybrid hypercar, utilizing supercapacitors instead of traditional batteries. It produces 819 hp and features futuristic styling inspired by the Countach.");
 
 INSERT INTO Cars (Model, TopSpeed, Cost, Description) VALUES ("Cayenne Turbo GT", 186, 196300, "The Cayenne Turbo GT is an SUV that defies physics. With a 650 hp V8 and specialized track tires, it currently holds SUV lap records, offering supercar performance in a family-sized package.");
+
+
+-- All cars
+SELECT * FROM Cars
+
+-- All cars and the maker
+
+SELECT Makers.Name,Cars.Model FROM Cars
+JOIN Makers ON Makers.MakerID=Cars.MakerID
+
+-- Cars of one make
+SELECT Cars.Model FROM Cars
+JOIN Makers ON Makers.MakerID=Cars.MakerID
+WHERE Makers.Name="Ferarri";
+
+-- Just id, maker, model and imageurl
+
+SELECT Cars.CarID,Makers.Name,Cars.Model,Cars.ImagURL
+FROM Cars
+JOIN Makers ON Makers.MakerID=Cars.MakerID;

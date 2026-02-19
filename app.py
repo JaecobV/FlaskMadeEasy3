@@ -18,15 +18,22 @@ def close_connection(exception):
     if db is not None:
         db.close()
 
+def query_db(query, args=(), one=False):
+    cur = get_db().execute(query, args)
+    rv = cur.fetchall()
+    cur.close()
+    return (rv[0] if rv else None) if one else rv
+
 
 @app.route('/')
 def home():
-    db = get_db()
-    cursor = db.cursor()
-    sql = "SELECT * FROM Cars"
-    cursor.execute(sql)
-    rows = cursor.fetchall()
-    return str(rows)
+    #home page- just the ID, Maker, Model, and Image URL
+    sql = """
+                SELECT Cars.CarID,Makers.Name,Cars.Model,Cars.ImagURL
+                FROM Cars
+                JOIN Makers ON Makers.MakerID=Cars.MakerID;"""
+    results = query_db(sql) 
+    return str(results) 
 
 if __name__ == '__main__':
     app.run(debug=True)
