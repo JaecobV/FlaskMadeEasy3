@@ -35,5 +35,14 @@ def home():
     results = query_db(sql) 
     return str(results) 
 
+@app.route("/car/<int:id>")
+def car(id):
+        #just one car based on the id
+        sql = """SELECT * FROM Cars 
+        JOIN Makers ON Makers.MakerID=Cars.MakerID
+        WHERE cars.CarID = ?;"""
+        result = query_db(sql,(id,),True)
+        return str(result)
+
 if __name__ == '__main__':
     app.run(debug=True)

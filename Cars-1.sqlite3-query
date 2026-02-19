@@ -52,3 +52,8 @@ WHERE Makers.Name="Ferarri";
 SELECT Cars.CarID,Makers.Name,Cars.Model,Cars.ImagURL
 FROM Cars
 JOIN Makers ON Makers.MakerID=Cars.MakerID;
+
+-- Just one car base on id
+SELECT * FROM Cars 
+JOIN Makers ON Makers.MakerID=Cars.MakerID
+WHERE cars.CarID = 2;
