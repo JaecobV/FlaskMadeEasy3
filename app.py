@@ -42,7 +42,7 @@ def car(id):
         JOIN Makers ON Makers.MakerID=Cars.MakerID
         WHERE cars.CarID = ?;"""
         result = query_db(sql,(id,),True)
-        return str(result)
+        return render_template("car.html",car=result)
 
 if __name__ == '__main__':
     app.run(debug=True)
